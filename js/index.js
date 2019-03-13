@@ -49,7 +49,7 @@ var Fireworks = function(){
 		self.ctx = self.canvas.getContext('2d');
 		self.ctx.lineCap = 'round';
 		self.ctx.lineJoin = 'round';
-		self.lineWidth = 5;
+		self.lineWidth = 3;
 		self.bindEvents();			
 		self.canvasLoop();
 		
