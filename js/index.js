@@ -30,10 +30,10 @@ var Fireworks = function(){
 		self.mx = self.cw/2;
 		self.my = self.ch/2;
 		self.currentHue = 20;
-		self.partSpeed = 5;
+		self.partSpeed = 10;
 		self.partSpeedVariance = 10;
 		self.partWind = 50;
-		self.partFriction = 5;
+		self.partFriction = 2;
 		self.partGravity = 1;
 		self.hueMin = 15;
 		self.hueMax = 20;
@@ -49,7 +49,7 @@ var Fireworks = function(){
 		self.ctx = self.canvas.getContext('2d');
 		self.ctx.lineCap = 'round';
 		self.ctx.lineJoin = 'round';
-		self.lineWidth = 1;
+		self.lineWidth = 5;
 		self.bindEvents();			
 		self.canvasLoop();
 		
@@ -387,7 +387,7 @@ var Fireworks = function(){
 	
 	self.init();
   
-  var initialLaunchCount = 100000;
+  var initialLaunchCount = 9999;
   while(initialLaunchCount--){
     setTimeout(function(){
  		self.fireworks.push(new Firework(self.cw/2, self.ch, rand(50, self.cw-50), rand(50, self.ch/2)-50));
@@ -419,7 +419,7 @@ var guiPresets = {
 					"hueMin": 15,
 					"hueMax": 20,
 					"hueVariance": 0,
-					"lineWidth": 1,
+					"lineWidth": 2,
 					"clearAlpha": 25
 				  }
 				},
